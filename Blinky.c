@@ -38,6 +38,8 @@ void Switch_On (unsigned char led) {
  *---------------------------------------------------------------------------*/
 void Switch_Off (unsigned char led) {
   LED_Off(led);
+	LED_Off(led);
+	
 }
 
 

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Flash\Blinky.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Flash\Blinky.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5040049: Last Updated: Wed Sep 25 10:40:08 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5040049: Last Updated: Wed Sep 25 18:17:21 2019
 <BR><P>
 <H3>Maximum Stack Usage =        136 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -281,7 +281,7 @@ Global Symbols
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseA
 </UL>
 
-<P><STRONG><a name="[6d]"></a>Switch_Off</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, blinky.o(.text))
+<P><STRONG><a name="[6d]"></a>Switch_Off</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, blinky.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Switch_Off &rArr; LED_Off &rArr; GPIO_PinWrite
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
@@ -437,6 +437,49 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_self
 </UL>
+
+<P><STRONG><a name="[74]"></a>GPIO_PortClock</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, gpio_lpc18xx.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
+</UL>
+
+<P><STRONG><a name="[76]"></a>GPIO_SetDir</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, gpio_lpc18xx.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_SetDir
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
+</UL>
+
+<P><STRONG><a name="[77]"></a>GPIO_PinWrite</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, gpio_lpc18xx.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_PinWrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
+</UL>
+
+<P><STRONG><a name="[e0]"></a>GPIO_PinRead</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gpio_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[e1]"></a>GPIO_PortWrite</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, gpio_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[e2]"></a>GPIO_PortRead</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, gpio_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[75]"></a>SCU_PinConfigure</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, scu_lpc18xx.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SCU_PinConfigure
+</UL>
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Uninitialize
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
+</UL>
+
+<P><STRONG><a name="[e3]"></a>SCU_CLK_PinConfigure</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[e4]"></a>SCU_USB1_PinConfigure</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[e5]"></a>SCU_I2C_PinConfigure</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[e6]"></a>SCU_ADC_ChannelPinConfigure</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, scu_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[e7]"></a>SCU_DAC_PinConfigure</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
+
+<P><STRONG><a name="[e8]"></a>SCU_PinInterruptSourceSelect</STRONG> (Thumb, 112 bytes, Stack size 12 bytes, scu_lpc18xx.o(.text), UNUSED)
 
 <P><STRONG><a name="[3]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_lpc18xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc18xx.o(RESET)
@@ -638,7 +681,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[e0]"></a>MeasureFreq</STRONG> (Thumb, 94 bytes, Stack size 12 bytes, system_lpc18xx.o(.text), UNUSED)
+<P><STRONG><a name="[e9]"></a>MeasureFreq</STRONG> (Thumb, 94 bytes, Stack size 12 bytes, system_lpc18xx.o(.text), UNUSED)
 
 <P><STRONG><a name="[81]"></a>GetClkSel</STRONG> (Thumb, 168 bytes, Stack size 0 bytes, system_lpc18xx.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetClockFreq
@@ -670,49 +713,6 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc18xx.o(.text)
 </UL>
-<P><STRONG><a name="[74]"></a>GPIO_PortClock</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, gpio_lpc18xx.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
-</UL>
-
-<P><STRONG><a name="[76]"></a>GPIO_SetDir</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, gpio_lpc18xx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_SetDir
-</UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
-</UL>
-
-<P><STRONG><a name="[77]"></a>GPIO_PinWrite</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, gpio_lpc18xx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_PinWrite
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
-</UL>
-
-<P><STRONG><a name="[e1]"></a>GPIO_PinRead</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gpio_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[e2]"></a>GPIO_PortWrite</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, gpio_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[e3]"></a>GPIO_PortRead</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, gpio_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[75]"></a>SCU_PinConfigure</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, scu_lpc18xx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SCU_PinConfigure
-</UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Uninitialize
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Initialize
-</UL>
-
-<P><STRONG><a name="[e4]"></a>SCU_CLK_PinConfigure</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[e5]"></a>SCU_USB1_PinConfigure</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[e6]"></a>SCU_I2C_PinConfigure</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[e7]"></a>SCU_ADC_ChannelPinConfigure</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, scu_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[e8]"></a>SCU_DAC_PinConfigure</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, scu_lpc18xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[e9]"></a>SCU_PinInterruptSourceSelect</STRONG> (Thumb, 112 bytes, Stack size 12 bytes, scu_lpc18xx.o(.text), UNUSED)
-
 <P><STRONG><a name="[ea]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[84]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))

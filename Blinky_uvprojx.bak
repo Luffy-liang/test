@@ -14,6 +14,8 @@
         <TargetCommonOption>
           <Device>LPC1857</Device>
           <Vendor>NXP (founded by Philips)</Vendor>
+          <PackID>Keil.LPC1800_DFP.2.4.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x10000000,0x8000) IRAM2(0x20000000,0x10000) IROM(0x1A000000,0x80000) IROM2(0x1B000000,0x80000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -82,6 +84,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -143,7 +147,6 @@
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
             <RestoreSysVw>1</RestoreSysVw>
-            <UsePdscDebugDescription>1</UsePdscDebugDescription>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>1</TargetSelection>
@@ -360,6 +363,8 @@
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
             <useXO>0</useXO>
+            <v6Lang>0</v6Lang>
+            <v6LangP>0</v6LangP>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -416,58 +421,12 @@
         </Group>
         <Group>
           <GroupName>::Board Support</GroupName>
-          <Files>
-            <File>
-              <FileName>LED_MCB1800.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\Keil\LPC1800_DFP\2.4.0\Boards\Keil\MCB1800\Common\LED_MCB1800.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
-          <Files>
-            <File>
-              <FileName>RTX_CM3.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS_RTX\LIB\ARM\RTX_CM3.lib</FilePath>
-            </File>
-            <File>
-              <FileName>RTX_Conf_CM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>RTE\CMSIS\RTX_Conf_CM.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
-          <Files>
-            <File>
-              <FileName>GPIO_LPC18xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\Keil\LPC1800_DFP\2.4.0\RTE_Driver\GPIO_LPC18xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>SCU_LPC18xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\Keil\LPC1800_DFP\2.4.0\RTE_Driver\SCU_LPC18xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>RTE_Device.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>RTE\Device\LPC1857\RTE_Device.h</FilePath>
-            </File>
-            <File>
-              <FileName>startup_LPC18xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>RTE\Device\LPC1857\startup_LPC18xx.s</FilePath>
-            </File>
-            <File>
-              <FileName>system_LPC18xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>RTE\Device\LPC1857\system_LPC18xx.c</FilePath>
-            </File>
-          </Files>
         </Group>
       </Groups>
     </Target>
@@ -547,6 +506,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -608,7 +569,6 @@
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
             <RestoreSysVw>1</RestoreSysVw>
-            <UsePdscDebugDescription>1</UsePdscDebugDescription>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>1</TargetSelection>
@@ -825,6 +785,8 @@
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
             <useXO>0</useXO>
+            <v6Lang>0</v6Lang>
+            <v6LangP>0</v6LangP>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -881,58 +843,12 @@
         </Group>
         <Group>
           <GroupName>::Board Support</GroupName>
-          <Files>
-            <File>
-              <FileName>LED_MCB1800.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\Keil\LPC1800_DFP\2.4.0\Boards\Keil\MCB1800\Common\LED_MCB1800.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
-          <Files>
-            <File>
-              <FileName>RTX_CM3.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS_RTX\LIB\ARM\RTX_CM3.lib</FilePath>
-            </File>
-            <File>
-              <FileName>RTX_Conf_CM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>RTE\CMSIS\RTX_Conf_CM.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
-          <Files>
-            <File>
-              <FileName>GPIO_LPC18xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\Keil\LPC1800_DFP\2.4.0\RTE_Driver\GPIO_LPC18xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>SCU_LPC18xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:\Keil_v5\ARM\PACK\Keil\LPC1800_DFP\2.4.0\RTE_Driver\SCU_LPC18xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>RTE_Device.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>RTE\Device\LPC1857\RTE_Device.h</FilePath>
-            </File>
-            <File>
-              <FileName>startup_LPC18xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>RTE\Device\LPC1857\startup_LPC18xx.s</FilePath>
-            </File>
-            <File>
-              <FileName>system_LPC18xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>RTE\Device\LPC1857\system_LPC18xx.c</FilePath>
-            </File>
-          </Files>
         </Group>
       </Groups>
     </Target>
